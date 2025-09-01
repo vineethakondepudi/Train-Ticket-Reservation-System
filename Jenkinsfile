@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage("Checkout") {
-            steps {
-                // Jenkins will checkout the repo automatically
-                git branch: 'master', url: 'https://github.com/vineethakondepudi/Train-Ticket-Reservation-System.git'
-            }
-        }
         stage("Build & Package") {
             steps {
                 sh "mvn clean package"
